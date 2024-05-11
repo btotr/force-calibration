@@ -17,11 +17,11 @@ else:
 hx = HX711(dout,dpclk,1)
 hx.wakeUp()
 hx.tara(25)
-hx.calFaktor(35)
+hx.calFaktor(225)
     
 while 1:
-    if taste.value() == 0:
-        hx.tara(10)
+    #if taste.value() == 0:
+    #    hx.tara(25)
     m="{:0.2f}".format(hx.masse(10))
     print(m)
     sleep(0.5)
